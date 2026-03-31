@@ -12,3 +12,4 @@ data/processed/*
 
 html/*
 !html/.gitkeep
+!html/voila_dual_map.html
