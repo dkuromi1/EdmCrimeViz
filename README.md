@@ -2,8 +2,8 @@
 
 **Author:** Darryl Kuromi | **Course:** GIS502 | **Date:** March 31, 2026
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main?labpath=01_data_processing.ipynb)
-[![Dashboard](https://img.shields.io/badge/Render-Dashboard-blueviolet?style=flat&logo=jupyter)](https://mybinder.org/v2/gh/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main?urlpath=voila%2Frender%2F01_data_processing.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/HEAD?urlpath=%2Fdoc%2Ftree%2F01_data_processing.ipynb)
+[![Dashboard](https://img.shields.io/badge/Render-Dashboard-blueviolet?style=flat&logo=jupyter)](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?urlpath=voila%2Frender%2F01_data_processing.ipynb)
 
 ## Project Overview
 This project analyzes **250,000+ historical crime records** (2023–2026) from the Edmonton Police Service. While traditional "High Crime" maps often highlight busy commercial areas, this analysis uses a weighted harm index based on the established principles (Cambridge Crime Harm Index) to identify the residential neighborhoods facing the highest relative risk. By moving beyond raw incident counts, this analysis provides a more nuanced understanding of urban safety, revealing that Edmonton's crime distribution is heavily skewed by retail "noise" like shoplifting.
