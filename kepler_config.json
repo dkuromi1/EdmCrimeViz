@@ -1,0 +1,325 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "filters": [
+        {
+          "dataId": ["zh06rv"],
+          "id": "1wuva9b1",
+          "name": ["Date Reported"],
+          "type": "timeRange",
+          "value": [0, 0],
+          "plotType": {
+            "interval": "1-week",
+            "defaultTimeFormat": "L",
+            "type": "histogram",
+            "aggregation": "sum"
+          },
+          "animationWindow": "free",
+          "yAxis": null,
+          "view": "side",
+          "speed": 3,
+          "syncTimelineMode": 1,
+          "enabled": true
+        },
+        {
+          "dataId": ["zh06rv"],
+          "id": "zvlh2q0x",
+          "name": ["Occurrence_Type_Group"],
+          "type": "multiSelect",
+          "value": [""],
+          "plotType": { "type": "histogram" },
+          "animationWindow": "free",
+          "yAxis": null,
+          "view": "side",
+          "speed": 1,
+          "enabled": true
+        }
+      ],
+      "layers": [
+        {
+          "id": "e2zk72i",
+          "type": "point",
+          "config": {
+            "dataId": "7r0ykh",
+            "columnMode": "points",
+            "label": "POIs",
+            "color": [18, 92, 119],
+            "highlightColor": [252, 242, 26, 255],
+            "columns": { "lat": "Latitude", "lng": "Longitude" },
+            "isVisible": true,
+            "visConfig": {
+              "radius": 20,
+              "fixedRadius": false,
+              "opacity": 0.8,
+              "outline": false,
+              "thickness": 2,
+              "strokeColor": null,
+              "colorRange": {
+                "colors": ["#C22E00", "#00939C"],
+                "name": "Uber Viz Diverging",
+                "type": "diverging",
+                "category": "Uber",
+                "reversed": true
+              },
+              "strokeColorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#4C0035",
+                  "#880030",
+                  "#B72F15",
+                  "#D6610A",
+                  "#EF9100",
+                  "#FFC300"
+                ]
+              },
+              "radiusRange": [0, 50],
+              "filled": true,
+              "billboard": false,
+              "allowHover": true,
+              "showNeighborOnHover": false,
+              "showHighlightColor": true
+            },
+            "hidden": false,
+            "textLabel": []
+          },
+          "visualChannels": {
+            "colorField": { "name": "Location_Type", "type": "string" },
+            "colorScale": "ordinal",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "linear"
+          }
+        },
+        {
+          "id": "zbfzi7",
+          "type": "geojson",
+          "config": {
+            "dataId": "-4bglt3",
+            "columnMode": "geojson",
+            "label": "Edmonton Boundaries",
+            "color": [30, 150, 190],
+            "highlightColor": [252, 242, 26, 255],
+            "columns": { "geojson": "geometry" },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0,
+              "strokeOpacity": 0.8,
+              "thickness": 0.5,
+              "strokeColor": [47, 197, 204],
+              "colorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#4C0035",
+                  "#880030",
+                  "#B72F15",
+                  "#D6610A",
+                  "#EF9100",
+                  "#FFC300"
+                ]
+              },
+              "strokeColorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#4C0035",
+                  "#880030",
+                  "#B72F15",
+                  "#D6610A",
+                  "#EF9100",
+                  "#FFC300"
+                ]
+              },
+              "radius": 10,
+              "sizeRange": [0, 10],
+              "radiusRange": [0, 50],
+              "heightRange": [0, 500],
+              "elevationScale": 5,
+              "stroked": true,
+              "filled": true,
+              "enable3d": false,
+              "wireframe": false,
+              "fixedHeight": false
+            },
+            "hidden": false,
+            "textLabel": [
+              {
+                "field": null,
+                "color": [255, 255, 255],
+                "size": 18,
+                "offset": [0, 0],
+                "anchor": "start",
+                "alignment": "center",
+                "outlineWidth": 0,
+                "outlineColor": [255, 0, 0, 255],
+                "background": false,
+                "backgroundColor": [0, 0, 200, 255]
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": null,
+            "colorScale": "quantile",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "linear",
+            "heightField": null,
+            "heightScale": "linear",
+            "radiusField": null,
+            "radiusScale": "linear"
+          }
+        },
+        {
+          "id": "5vgiuxn",
+          "type": "hexagon",
+          "config": {
+            "dataId": "zh06rv",
+            "label": "Crime Occurrances",
+            "color": [179, 173, 158],
+            "highlightColor": [252, 242, 26, 255],
+            "columns": { "lat": "Latitude", "lng": "Longitude" },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.8,
+              "worldUnitSize": 0.14,
+              "resolution": 8,
+              "colorRange": {
+                "colors": [
+                  "#FFC300",
+                  "#F6A400",
+                  "#E98500",
+                  "#DA6707",
+                  "#C74811",
+                  "#B32816",
+                  "#970029",
+                  "#710035",
+                  "#4C0035"
+                ],
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "reversed": true
+              },
+              "coverage": 0.9,
+              "sizeRange": [0, 500],
+              "percentile": [0, 100],
+              "elevationPercentile": [0, 100],
+              "elevationScale": 10,
+              "enableElevationZoomFactor": true,
+              "fixedHeight": false,
+              "colorAggregation": "count",
+              "sizeAggregation": "count",
+              "enable3d": true
+            },
+            "hidden": false,
+            "textLabel": [
+              {
+                "field": null,
+                "color": [255, 255, 255],
+                "size": 18,
+                "offset": [0, 0],
+                "anchor": "start",
+                "alignment": "center",
+                "outlineWidth": 0,
+                "outlineColor": [255, 0, 0, 255],
+                "background": false,
+                "backgroundColor": [0, 0, 200, 255]
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": null,
+            "colorScale": "quantize",
+            "sizeField": null,
+            "sizeScale": "linear"
+          }
+        }
+      ],
+      "effects": [
+        {
+          "id": "e_ch95gyd",
+          "type": "lightAndShadow",
+          "isEnabled": true,
+          "parameters": {
+            "timestamp": 1774304195771,
+            "timeMode": "pick",
+            "shadowIntensity": 0.5,
+            "shadowColor": [0, 0, 0],
+            "sunLightColor": [255, 255, 255],
+            "sunLightIntensity": 1,
+            "ambientLightColor": [255, 255, 255],
+            "ambientLightIntensity": 1,
+            "timezone": "America/Edmonton"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "-4bglt3": [
+              { "name": "neighbourhood_number", "format": null },
+              { "name": "descriptive_name", "format": null }
+            ],
+            "zh06rv": [
+              { "name": "OBJECTID", "format": null },
+              { "name": "Occurrence_Category", "format": null },
+              { "name": "Occurrence_Type_Group", "format": null },
+              { "name": "Date Reported", "format": null },
+              { "name": "Longitude", "format": null }
+            ],
+            "7r0ykh": [
+              { "name": "Latitude", "format": null },
+              { "name": "Longitude", "format": null },
+              { "name": "Location_Type", "format": null }
+            ]
+          },
+          "compareMode": false,
+          "compareType": "absolute",
+          "enabled": true
+        },
+        "brush": { "size": 0.5, "enabled": false },
+        "geocoder": { "enabled": false },
+        "coordinate": { "enabled": false }
+      },
+      "layerBlending": "normal",
+      "overlayBlending": "normal",
+      "splitMaps": [],
+      "animationConfig": { "currentTime": null, "speed": 1 },
+      "editor": { "features": [], "visible": true }
+    },
+    "mapState": {
+      "bearing": 20.25,
+      "dragRotate": true,
+      "latitude": 53.482498653359805,
+      "longitude": -113.56523109201375,
+      "pitch": 52.01715706334916,
+      "zoom": 10.859645444632955,
+      "isSplit": false,
+      "isViewportSynced": true,
+      "isZoomLocked": false,
+      "splitMapViewports": []
+    },
+    "uiState": {
+      "mapControls": {
+        "mapLegend": {
+          "active": true,
+          "settings": {
+            "position": {
+              "x": 10,
+              "anchorX": "right",
+              "y": 39,
+              "anchorY": "bottom"
+            }
+          }
+        }
+      }
+    }
+  }
+}

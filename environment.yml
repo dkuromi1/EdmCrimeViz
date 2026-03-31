@@ -1,0 +1,26 @@
+name: edmonton_crime_viz
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Core Data Science
+  - python=3.11
+  - pandas
+  - numpy
+  - jupyter
+  - requests
+  
+  # Spatial Data
+  - geopandas
+  - shapely
+  - pyarrow
+  - mapclassify
+  
+  # Visualization
+  - folium
+  - keplergl
+  - nodejs
+  - voila
+  
+  # Ghost Dependencies (Critical for KeplerGL Stability)
+  - jinja2<3.1.0

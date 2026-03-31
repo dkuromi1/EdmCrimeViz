@@ -1,0 +1,10 @@
+geopandas
+pandas
+keplergl
+folium
+pyarrow
+requests
+shapely
+numpy
+# Required to prevent KeplerGL/Jinja2 version conflicts
+jinja2<3.1.0
