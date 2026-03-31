@@ -3,4 +3,12 @@ __pycache__/
 .env
 .DS_Store
 .vscode/settings.json
-data/processed
+
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*
+!data/processed/*.parquet
+
+html/*
+!html/.gitkeep

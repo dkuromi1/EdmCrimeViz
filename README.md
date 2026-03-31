@@ -15,11 +15,21 @@ You can view this project in two ways:
 * **[Presentation Dashboard](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?urlpath=voila%2Frender%2F01_data_processing.ipynb):** A clean, executive-level view of the maps and insights using Binder and Voilà.
 * **[Interactive Notebook](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?labpath=01_data_processing.ipynb):** View the full ETL pipeline, spatial joins, and feature engineering logic.
 
+## Binder Deployment Notes
+Binder now runs against committed parquet caches in `data/processed/` instead of recalculating the full ETL pipeline from raw CSVs on startup. This keeps launches lighter and avoids shipping duplicate CSV exports in the repo.
+
+To rebuild locally from raw data:
+1. Place the EPS yearly CSVs in `data/raw/`.
+2. Set `FORCE_REBUILD = True` in the first notebook code cell.
+3. Run `01_data_processing.ipynb` top to bottom.
+
+Generated HTML exports are intentionally excluded from the deployable repo to keep the Binder bundle small.
+
 ## Technical Architecture
 * **Python 3.11** 
 * **ETL Pipeline:** Handled multi-CRS projections (converting EPSG:3776 and EPSG:3857 to unified EPSG:4326).
 * **GeoPandas** used for point-in-polygon joins and metric area calculations (using EPSG:3776 for Alberta-specific metric math).
-* **Apache Parquet** used for storage, significantly reducing memory overhead compared to CSV.
+* **Apache Parquet** used for storage and deployment, significantly reducing memory overhead compared to CSV.
 * **Visual Stack:** Synchronized Dual Maps **Folium** and a GPU-accelerated 3D dashboard via **Kepler.gl**.
 
 ## The "Superstore" Effect
@@ -33,7 +43,9 @@ To address this bias, this project utilized AI-assisted feature engineering (Gem
 2.  **Normalization:** Crime is calculated as **Harm-per-Capita**, using 2021 Census population data, to identify the neighborhoods where residents face the highest relative risk.
   
 ## Repository Structure
-- `01_data_processing.ipynb`: The primary analysis pipeline.
-- `data/`: Raw and processed data files.
+- `01_data_processing.ipynb`: The primary analysis pipeline, now defaulting to Binder-friendly parquet caches.
+- `data/processed/*.parquet`: Preprocessed deployable datasets used by Binder and Voilà.
+- `data/raw/`: Optional local rebuild inputs, intentionally excluded from the lightweight Binder bundle.
 - `kepler_config.json`: Saved state for the 3D dashboard.
-- `requirements.txt`: Environment dependencies for Binder.
+- `environment.yml`: Binder environment definition.
+- `requirements.txt`: Matching pip fallback dependencies.
