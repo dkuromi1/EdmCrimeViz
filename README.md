@@ -13,8 +13,8 @@ Traditional GIS platforms (ArcGIS Pro/Online) struggled with the computational l
 
 ## Interactive Deployment
 You can view this project in two ways:
-* **[Presentation Dashboard](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?urlpath=voila%2Frender%2F01_data_processing.ipynb):** A clean, executive-level view of the maps and insights using Binder and Voilà.
-* **[Interactive Notebook](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?labpath=01_data_processing.ipynb):** View the full ETL pipeline, spatial joins, and feature engineering logic.
+* **[Presentation Dashboard](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/BinderOptimized?urlpath=voila%2Frender%2F01_data_processing.ipynb):** A clean, executive-level view of the maps and insights using Binder and Voilà.
+* **[Interactive Notebook](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/BinderOptimized?labpath=01_data_processing.ipynb):** View the full ETL pipeline, spatial joins, and feature engineering logic.
 
 ## Binder Deployment Notes
 Binder now runs against committed parquet caches in `data/processed/` instead of recalculating the full ETL pipeline from raw CSVs on startup. This keeps launches lighter and avoids shipping duplicate CSV exports in the repo.
