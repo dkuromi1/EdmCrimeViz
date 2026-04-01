@@ -9,9 +9,22 @@
 This project analyzes **250,000+ historical crime records** (2023–2026) from the Edmonton Police Service using open source libraries like GeoPandas and Kepler.gl. It also uses a weighted harm index based on the Cambridge Crime Harm Index, to identify the residential neighbourhoods facing the highest relative risk.
 
 ## Interactive Deployment
-this project can be viewed in two ways:
+This project can be viewed in two ways:
 * **[Static Quarto Jupyter Notebook Report](https://edmcrimevizreport.netlify.app/):** View a static report with code available.
 * **[Interactive Jupyter Notebook](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?labpath=01_data_processing.ipynb):** View a live notebook hosted on Binder.
+
+## Run Locally
+Create the Conda environment, activate it, and launch JupyterLab:
+
+```bash
+conda env create -f environment.yml
+conda activate edmonton_crime_viz
+jupyter lab
+```
+
+Then open `01_data_processing.ipynb` and run the notebook from top to bottom.
+
+Expected output: the pipeline will read the cached raw inputs in `data/raw/`, regenerate processed datasets in `data/processed/`, and render the Folium dual map and final Kepler.gl map inside the notebook.
 
 ## Technical Architecture
 * **Python 3.11** 
@@ -27,4 +40,3 @@ A primary finding was the discovery of extreme spatial outliers. Analysis reveal
   
 ## Crime Ranking Methodology: The Harm Index
 This project uses a custom harm-weighting scheme inspired by the Cambridge Crime Harm Index. EPS incident types were mapped to a severity scale with LLM assistance and then manually reviewed and adjusted to better reflect local offense categories. The resulting scores are used to compare neighbourhood-level harm per capita rather than raw incident counts alone.
-
