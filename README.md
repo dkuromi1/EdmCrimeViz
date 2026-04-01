@@ -24,7 +24,7 @@ A primary finding was the discovery of extreme spatial outliers. Analysis reveal
 * **Hotspot #1:** Kingsway Superstore recorded **3,070 crimes**, 99% of which were "Theft Under $5000".
 * Nearly a quarter of city-wide shoplifting occurs in less than 1% of the total landmass, distorting unweighted crime stats.
   
-## Key Methodology: The Harm Index
+## Crime Ranking Methodology: The Harm Index
 To address this bias, this project utilized AI-assisted feature engineering (Gemini 3.1) to map unique EPS crime types to a severity scale.
 1.  **Weighting:** High-harm, low-frequency events (like violent crimes) are given greater mathematical weight than high-frequency retail nuisance crimes.
 2.  **Normalization:** Crime is calculated as **Harm-per-Capita**, using 2021 Census population data, to identify the neighborhoods where residents face the highest relative risk.
