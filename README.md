@@ -10,7 +10,7 @@ This project analyzes **250,000+ historical crime records** (2023–2026) from t
 
 ## Interactive Deployment
 this project can be viewed in two ways:
-* **[Static Quarto Digital Report](https://edmcrimevizreport.netlify.app/):** View a static report with code available.
+* **[Static Quarto Jupyter Notebook Report](https://edmcrimevizreport.netlify.app/):** View a static report with code available.
 * **[Interactive Jupyter Notebook](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?labpath=01_data_processing.ipynb):** View a live notebook hosted on Binder.
 
 ## Technical Architecture
