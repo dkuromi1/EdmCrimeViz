@@ -5,14 +5,12 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/HEAD?urlpath=%2Fdoc%2Ftree%2F01_data_processing.ipynb)
 
 ## Project Overview
-This project analyzes **250,000+ historical crime records** (2023–2026) from the Edmonton Police Service. While traditional "High Crime" maps often highlight busy commercial areas, this analysis uses a weighted harm index based on the established principles (Cambridge Crime Harm Index) to identify the residential neighborhoods facing the highest relative risk. By moving beyond raw incident counts, this analysis provides a more nuanced understanding of urban safety, revealing that Edmonton's crime distribution is heavily skewed by retail "noise" like shoplifting.
-
-Traditional GIS platforms (ArcGIS Pro/Online) struggled with the computational load and credit costs associated with analysing this dataset. This project solves that bottleneck by using a code-first approach with **GeoPandas**, **Kepler.gl**, and a custom crime severity index based on established principles.
+This project analyzes **250,000+ historical crime records** (2023–2026) from the Edmonton Police Service using open source libraries like GeoPandas and Kepler.gl. It also uses a weighted harm index based on the Cambridge Crime Harm Index, to identify the residential neighborhoods facing the highest relative risk.
 
 ## Interactive Deployment
-You can view this project in two ways:
-* **[Interactive Binder Notebook](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?labpath=01_data_processing.ipynb):** View the full live notebook hosted on Binder
-* **[Quarto Digital Report](https://edmcrimevizreport.netlify.app/):** View the static report with logic included.
+this project can be viewed in two ways:
+* **[Static Quarto Digital Report](https://edmcrimevizreport.netlify.app/):** View a static report with code available.
+* **[Interactive Jupyter Notebook](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?labpath=01_data_processing.ipynb):** View a live notebook hosted on Binder.
 
 ## Technical Architecture
 * **Python 3.11** 
@@ -31,8 +29,4 @@ To address this bias, this project utilized AI-assisted feature engineering (Gem
 1.  **Weighting:** High-harm, low-frequency events (like violent crimes) are given greater mathematical weight than high-frequency retail nuisance crimes.
 2.  **Normalization:** Crime is calculated as **Harm-per-Capita**, using 2021 Census population data, to identify the neighborhoods where residents face the highest relative risk.
   
-## Repository Structure
-- `01_data_processing.ipynb`: The primary analysis pipeline.
-- `data/`: Raw and processed data files.
-- `kepler_config.json`: Saved state for the 3D dashboard.
-- `requirements.txt`: Environment dependencies for Binder.
+
