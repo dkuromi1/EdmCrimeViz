@@ -18,7 +18,7 @@ this project can be viewed in two ways:
 * **ETL Pipeline:** Handled multi-CRS projections (converting EPSG:3776 and EPSG:3857 to unified EPSG:4326).
 * **GeoPandas** used for point-in-polygon joins and metric area calculations (using EPSG:3776 for Alberta-specific metric math).
 * **Apache Parquet** used for storage, significantly reducing memory overhead compared to CSV.
-* **Visual Stack:** Synchronized Dual Maps **Folium** and a GPU-accelerated 3D dashboard via **Kepler.gl**.
+* **Visual Stack:** Synchronized Dual Maps using **Folium** and a GPU-accelerated 3D dashboard via **Kepler.gl**.
 
 ## The "Superstore" Effect
 A primary finding was the discovery of extreme spatial outliers. Analysis revealed that **7 of the 8 highest-crime intersections in Edmonton** correspond directly to Real Canadian Superstore locations.
@@ -26,8 +26,5 @@ A primary finding was the discovery of extreme spatial outliers. Analysis reveal
 * Nearly a quarter of city-wide shoplifting occurs in less than 1% of the total landmass, distorting unweighted crime stats.
   
 ## Crime Ranking Methodology: The Harm Index
-To address this, this project utilized AI-assisted feature engineering to map unique EPS crime types to a severity scale.
-1.  **Weighting:** High-harm, low-frequency events (like violent crimes) are given greater mathematical weight than high-frequency retail nuisance crimes.
-2.  **Normalization:** Crime is calculated as **Harm-per-Capita**, using 2021 Census population data, to identify the neighbourhoods where residents face the highest relative risk.
-  
+This project uses a custom harm-weighting scheme inspired by the Cambridge Crime Harm Index. EPS incident types were mapped to a severity scale with LLM assistance and then manually reviewed and adjusted to better reflect local offense categories. The resulting scores are used to compare neighbourhood-level harm per capita rather than raw incident counts alone.
 
