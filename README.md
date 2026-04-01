@@ -6,7 +6,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/HEAD?urlpath=%2Fdoc%2Ftree%2F01_data_processing.ipynb)
 
 ## Project Overview
-This project analyzes **250,000+ historical crime records** (2023–2026) from the Edmonton Police Service using open source libraries like GeoPandas and Kepler.gl. It also uses a weighted harm index based on the Cambridge Crime Harm Index, to identify the residential neighborhoods facing the highest relative risk.
+This project analyzes **250,000+ historical crime records** (2023–2026) from the Edmonton Police Service using open source libraries like GeoPandas and Kepler.gl. It also uses a weighted harm index based on the Cambridge Crime Harm Index, to identify the residential neighbourhoods facing the highest relative risk.
 
 ## Interactive Deployment
 this project can be viewed in two ways:
@@ -28,6 +28,6 @@ A primary finding was the discovery of extreme spatial outliers. Analysis reveal
 ## Crime Ranking Methodology: The Harm Index
 To address this, this project utilized AI-assisted feature engineering to map unique EPS crime types to a severity scale.
 1.  **Weighting:** High-harm, low-frequency events (like violent crimes) are given greater mathematical weight than high-frequency retail nuisance crimes.
-2.  **Normalization:** Crime is calculated as **Harm-per-Capita**, using 2021 Census population data, to identify the neighborhoods where residents face the highest relative risk.
+2.  **Normalization:** Crime is calculated as **Harm-per-Capita**, using 2021 Census population data, to identify the neighbourhoods where residents face the highest relative risk.
   
 
