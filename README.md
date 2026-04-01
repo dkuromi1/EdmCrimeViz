@@ -2,6 +2,7 @@
 
 **Author:** Darryl Kuromi | **Course:** GIS502 | **Date:** March 31, 2026
 
+[![Quarto](https://img.shields.io/badge/Quarto-447099?style=flat-square&logo=quarto&logoColor=white)](https://edmcrimevizreport.netlify.app/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/HEAD?urlpath=%2Fdoc%2Ftree%2F01_data_processing.ipynb)
 
 ## Project Overview
