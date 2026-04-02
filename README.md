@@ -10,8 +10,8 @@ This project analyzes **250,000+ historical crime records** (2023–2026) from t
 
 ## Interactive Deployment
 This project can be viewed in two ways:
-* **[Static Quarto Jupyter Notebook Report](https://edmcrimevizreport.netlify.app/):** View a static report with code available.
-* **[Interactive Jupyter Notebook](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?labpath=01_data_processing.ipynb):** View a live notebook hosted on Binder.
+* **[Static Quarto Jupyter Notebook Report](https://edmcrimevizreport.netlify.app/):** Notebook's documention (with working interactive maps) and folded code.
+* **[Interactive Jupyter Notebook](https://mybinder.org/v2/gh/dkuromi1/EdmCrimeViz/main?labpath=01_data_processing.ipynb):** View the live notebook hosted on Binder.
 
 ## Run Locally
 Create the Conda environment, activate it, and launch JupyterLab:
@@ -26,7 +26,7 @@ Then open `01_data_processing.ipynb` and run the notebook from top to bottom.
 
 Expected output: the pipeline will read the cached raw inputs in `data/raw/`, regenerate processed datasets in `data/processed/`, and render the Folium dual map and final Kepler.gl map inside the notebook.
 
-## Technical Architecture
+## Technical Details
 * **Python 3.11** 
 * **ETL Pipeline:** Handled multi-CRS projections (converting EPSG:3776 and EPSG:3857 to unified EPSG:4326).
 * **GeoPandas** used for point-in-polygon joins and metric area calculations (using EPSG:3776 for Alberta-specific metric math).
