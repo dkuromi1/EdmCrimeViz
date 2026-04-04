@@ -24,7 +24,7 @@ jupyter lab
 
 Then open `01_data_processing.ipynb` and run the notebook from top to bottom.
 
-Expected output: the pipeline will read the cached raw inputs in `data/raw/`, regenerate processed datasets in `data/processed/`, and render the Folium dual map and final Kepler.gl map inside the notebook.
+Expected output: the pipeline will read the cached raw inputs in `data/raw/`, regenerate processed datasets in `data/processed/`, and render the Folium dual map and a sample Kepler.gl map inside the notebook.
 
 ## Technical Details
 * **Python 3.11** 
@@ -33,10 +33,3 @@ Expected output: the pipeline will read the cached raw inputs in `data/raw/`, re
 * **Apache Parquet** used for storage, significantly reducing memory overhead compared to CSV.
 * **Visual Stack:** Synchronized Dual Maps using **Folium** and a GPU-accelerated 3D dashboard via **Kepler.gl**.
 
-## The "Superstore" Effect
-A primary finding was the discovery of extreme spatial outliers. Analysis revealed that **7 of the 8 highest-crime intersections in Edmonton** correspond directly to Real Canadian Superstore locations.
-* **Hotspot #1:** Kingsway Superstore recorded **3,070 crimes**, 99% of which were "Theft Under $5000".
-* Nearly a quarter of city-wide shoplifting occurs in less than 1% of the total landmass, distorting unweighted crime stats.
-  
-## Crime Ranking Methodology: The Harm Index
-This project uses a custom harm-weighting scheme inspired by the Cambridge Crime Harm Index. EPS incident types were mapped to a severity scale with LLM assistance and then manually reviewed and adjusted to better reflect local offense categories. The resulting scores are used to compare neighbourhood-level harm per capita rather than raw incident counts alone.
